@@ -7,12 +7,9 @@ def only_negatives(lst):
 
     Returns (List[int]): a list with the negative numbers from the input
     """
-    # Your code goes here
-
-    # My name is César
 
     # Replace None with the appropriate return value 
-    return None
+    return [item for item in lst if item < 0]
 
 def lst_min_idx(lst):
     """
@@ -29,10 +26,11 @@ def lst_min_idx(lst):
     assert len(lst) > 0
 
     # Your Code Goes Here
-
+    min_value = min(lst)
+    min_idx = lst.index(min_value)
 
     # Replace None with the appropriate return value
-    return None
+    return min_idx
 
 
 def identify_values(lst):
@@ -49,11 +47,18 @@ def identify_values(lst):
     """
     # Your Code Goes Here
 
-
+    result = []
+    for item in lst:
+        if item < 0:
+            result.append("neg")
+        elif item == 0:
+            result.append("zero")
+        else:
+            result.append("pos")
 
 
     # Replace None with the appropriate return value
-    return None
+    return result
 
 
 def split_by_identity(lst):
@@ -74,8 +79,14 @@ def split_by_identity(lst):
     """
     # Your Code Goes Here
 
-
-
+    result = [[], [], []]
+    for ix, value in enumerate(lst):
+        if value < 0:
+            result[0].append(ix)
+        elif value == 0:
+            result[1].append(ix)
+        else:
+            result[2].append(ix)
 
     # Replace None with the appropriate return value
-    return None
+    return result
