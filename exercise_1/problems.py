@@ -9,7 +9,7 @@ def only_negatives(lst):
     """
     # Your code goes here
 
-
+    # My name is César
 
     # Replace None with the appropriate return value 
     return None
